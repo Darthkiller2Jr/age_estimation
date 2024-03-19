@@ -1,4 +1,6 @@
 # Notre contribution
+Axel Benyamine, Dimitri de Saint Guilhem, Matthieu Souda
+
 Nous reprenons le depôt github d'origine en modifiant légèrement le fichier dataset.py.
 Par ailleurs nous avons ajouté des fichiers : 
 
@@ -6,7 +8,11 @@ Par ailleurs nous avons ajouté des fichiers :
 - Le notebook age_estimation_models_comparaison compare les différents modèles testés et les résultats sont dans results models comparaison.zip
 - Le notebook age_estimation_datasets_comparaison met en place différentes pipeline pour comparer l'utilisation des différents datasets (synthétique ou réel, classé selon genre ou non).
 - Le notebook data_analysis réalise l'analyse de l'appa real dataset. On y analyse la distribution d'âge et de genre ainsi que les influences sur le modèle.
-- 
+- gender_classifier.py crée un csv avec le nom des images du dataset dont le chemin est précisé dans le code ainsi qu'avec le genre de la personne sur l'image.
+
+  Pour faire tourner le code, il faut déjà suivre les instructions ci-dessous pour s'assurer que le projet original fonctionne.
+  Pour exploiter le gender_classifier il faut y modifier le chemin pour lui indiquer quel dossier d'images utiliser. Pour utiliser la distinction de genre dans le notebook age_estimation_datasets_comparaison, il faut créer le bon fichier csv à l'aide des fonctions qui y sont.
+  
 # DL-DIY potential project ideas
 - pose this problem as regression or classification and compare them
 - implementing the [DEX method](http://people.ee.ethz.ch/~timofter/publications/Rothe-IJCV-2016.pdf) and [Residual DEX method](http://people.ee.ethz.ch/~timofter/publications/Agustsson-FG-2017.pdf)
