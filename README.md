@@ -5,6 +5,7 @@ Par ailleurs nous avons ajouté des fichiers :
 - Le dossier stylegan comporte un fichier gen_images.py à remplacer dans celui du dossier github de stylegan3 pour pouvoir utiliser le notebook. Celui-ci sert à générer des images et à les télécharger. Il a été éxécuté sur Google Colab.
 - Le notebook age_estimation_models_comparaison compare les différents modèles testés et les résultats sont dans results models comparaison.zip
 - Le notebook age_estimation_datasets_comparaison met en place différentes pipeline pour comparer l'utilisation des différents datasets (synthétique ou réel, classé selon genre ou non).
+- Le notebook data_analysis réalise l'analyse de l'appa real dataset. On y analyse la distribution d'âge et de genre ainsi que les influences sur le modèle.
 - 
 # DL-DIY potential project ideas
 - pose this problem as regression or classification and compare them
