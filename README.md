@@ -1,3 +1,10 @@
+# Notre contribution
+Nous reprenons le depôt github d'origine en modifiant légèrement le fichier dataset.py.
+Par ailleurs nous avons ajouté des fichiers : 
+
+- Le dossier stylegan comporte un fichier gen_images.py à remplacer dans celui du dossier github de stylegan3 pour pouvoir utiliser le notebook. Celui-ci sert à générer des images et à les télécharger. Il a été éxécuté sur Google Colab.
+- Le notebook age_estimation_models_comparaison compare les différents modèles testés et les résultats sont dans results models comparaison.zip
+- 
 # DL-DIY potential project ideas
 - pose this problem as regression or classification and compare them
 - implementing the [DEX method](http://people.ee.ethz.ch/~timofter/publications/Rothe-IJCV-2016.pdf) and [Residual DEX method](http://people.ee.ethz.ch/~timofter/publications/Agustsson-FG-2017.pdf)
