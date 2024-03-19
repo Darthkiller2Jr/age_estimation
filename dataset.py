@@ -31,9 +31,11 @@ class ImgAugTransform:
         img = self.aug.augment_image(img)
         return img
 
+def identity(x):
+    return x
 
 class FaceDataset(Dataset):
-    def __init__(self, data_dir, data_type, img_size=224, augment=False, age_stddev=1.0):
+    def __init__(self, data_dir, data_type, ignore_path = "ignore_list.csv", img_size=224, augment=False, age_stddev=1.0):
         assert(data_type in ("train", "valid", "test"))
         csv_path = Path(data_dir).joinpath(f"gt_avg_{data_type}.csv")
         img_dir = Path(data_dir).joinpath(data_type)
@@ -44,13 +46,13 @@ class FaceDataset(Dataset):
         if augment:
             self.transform = ImgAugTransform()
         else:
-            self.transform = lambda i: i
+            self.transform = identity
 
         self.x = []
         self.y = []
         self.std = []
         df = pd.read_csv(str(csv_path))
-        ignore_path = Path(__file__).resolve().parent.joinpath("ignore_list.csv")
+        ignore_path = Path(__file__).resolve().parent.joinpath(ignore_path)
         ignore_img_names = list(pd.read_csv(str(ignore_path))["img_name"].values)
 
         for _, row in df.iterrows():
